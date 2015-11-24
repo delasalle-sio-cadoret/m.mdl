@@ -5,9 +5,7 @@
 //                                                 Elle utilise l'objet PDO
 //                       Auteur : JM Cartron                       Dernière modification : 30/9/2015
 // -------------------------------------------------------------------------------------------------------------------------
-
 // liste des méthodes de cette classe (dans l'ordre d'apparition dans la classe) :
-
 // __construct                   : le constructeur crée la connexion $cnx à la base de données
 // __destruct                    : le destructeur ferme la connexion $cnx à la base de données
 // getNiveauUtilisateur          : fournit le niveau d'un utilisateur identifié par $nomUser et $mdpUser
@@ -28,19 +26,15 @@
 // enregistrerUtilisateur        : enregistre l'utilisateur dans la bdd
 // aPasseDesReservations         : recherche si l'utilisateur ($name) a passé des réservations à venir
 // supprimerUtilisateur          : supprime l'utilisateur dans la bdd
-
 // listeSalles                   : fournit la liste des salles disponibles à la réservation
-
 // certaines méthodes nécessitent les fichiers Reservation.class.php, Utilisateur.class.php et Outils.class.php
 include_once ('Utilisateur.class.php');
 include_once ('Reservation.class.php');
 include_once ('Salle.class.php');
 include_once ('Outils.class.php');
-
 // inclusion des paramètres de l'application
 //include_once ('parametres.free.php');
 include_once ('parametres.localhost.php');
-
 // début de la classe DAO (Data Access Object)
 class DAO
 {
@@ -72,7 +66,6 @@ class DAO
 	public function __destruct() {
 		unset($this->cnx);
 	}
-
 	// ------------------------------------------------------------------------------------------------------
 	// -------------------------------------- Méthodes d'instances ------------------------------------------
 	// ------------------------------------------------------------------------------------------------------
@@ -102,7 +95,6 @@ class DAO
 		// fourniture de la réponse
 		return $reponse;
 	}	
-
 	// génération aléatoire d'un digicode de 6 caractères hexadécimaux
 	// modifié par Jim le 5/5/2015
 	public function genererUnDigicode()
@@ -120,7 +112,6 @@ class DAO
 		// fourniture de la réponse
 		return $digicode;
 	}	
-
 	// mise à jour de la table mrbs_entry_digicode (si besoin) pour créer les digicodes manquants
 	// cette fonction peut dépanner en cas d'absence des triggers chargés de créer les digicodes
 	// modifié par Jim le 5/5/2015
@@ -230,7 +221,6 @@ class DAO
 		// fourniture de la collection
 		return $lesReservations;
 	}
-
 	// fournit true si la réservation ($idReservation) existe, false sinon
 	// modifié par Jim le 5/5/2015
 	public function existeReservation($idReservation)
@@ -312,7 +302,6 @@ class DAO
 			return $uneReservation;
 		}
 	}
-
 	// fournit un objet Utilisateur à partir de son nom ($nomUser)
 	// fournit la valeur null si le nom n'existe pas
 	// modifié par Jim le 27/9/2015
@@ -390,7 +379,6 @@ class DAO
 		else
 			return true;
 	}
-
 	// enregistre le nouveau mot de passe de l'utilisateur dans la bdd après l'avoir hashé en MD5
 	// modifié par Jim le 6/5/2015
 	public function modifierMdpUser($nomUser, $nouveauMdp)
@@ -404,7 +392,6 @@ class DAO
 		$ok = $req->execute();
 		return $ok;
 	}	
-
 	// envoie un mail à l'utilisateur avec son nouveau mot de passe
 	// retourne true si envoi correct, false en cas de problème d'envoi
 	// modifié par Jim le 6/5/2015
@@ -412,7 +399,6 @@ class DAO
 	{	global $ADR_MAIL_EMETTEUR;
 		// si l'adresse n'est pas dans la table mrbs_users :
 		if ( ! $this->existeUtilisateur($nomUser) ) return false;
-
 		// recherche de l'adresse mail
 		$adrMail = $this->getUtilisateur($nomUser)->getEmail();
 		
@@ -423,7 +409,6 @@ class DAO
 		$ok = Outils::envoyerMail ($adrMail, $sujet, $message, $ADR_MAIL_EMETTEUR);
 		return $ok;
 	}
-
 	// teste si le digicode saisi ($digicodeSaisi) correspond bien à une réservation
 	// de la salle indiquée ($idSalle) pour l'heure courante
 	// fournit la valeur 0 si le digicode n'est pas bon, 1 si le digicode est bon
@@ -489,7 +474,6 @@ class DAO
 		else
 			return "1";
 	}
-
 	// enregistre l'utilisateur dans la bdd
 	// modifié par Jim le 6/5/2015
 	public function enregistrerUtilisateur($name, $level, $password, $email)
@@ -505,7 +489,6 @@ class DAO
 		$ok = $req->execute();
 		return $ok;
 	}
-
 	// recherche si un utilisateur a passé des réservations à venir
 	// modifié par Jim le 6/5/2015
 	public function aPasseDesReservations($name)
@@ -579,6 +562,5 @@ class DAO
 	}
 	
 } // fin de la classe DAO
-
 // ATTENTION : on ne met pas de balise de fin de script pour ne pas prendre le risque
 // d'enregistrer d'espaces après la balise de fin de script !!!!!!!!!!!!

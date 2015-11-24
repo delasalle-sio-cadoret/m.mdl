@@ -38,7 +38,7 @@
 				
 			</div>
 			<div data-role="footer" data-position="fixed" data-theme="<?php echo $themeNormal; ?>">
-				<h4>Menu</h4>
+				<h4><a href="index.php?action=Menu">Menu</a></h4>
 			</div>
 		</div>
 	</body>

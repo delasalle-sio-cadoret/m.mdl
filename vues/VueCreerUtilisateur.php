@@ -26,9 +26,9 @@
 					<h4>Niveau :</h4>
 					
 					<div data-role="fieldcontain" class="ui-hide-label">
-					        <label><input name="niveau" type="radio" value="1">Invité</label>
-                            <label><input name="niveau" type="radio" value="2">Utilisateur</label>
-                            <label><input name="niveau" type="radio" value="3">Administrateur</label>
+					        <label><input name="niveau" type="radio" value="0">Invité</label>
+                            <label><input name="niveau" type="radio" value="1">Utilisateur</label>
+                            <label><input name="niveau" type="radio" value="2">Administrateur</label>
 					</div>
 					<div data-role="fieldcontain" class="ui-hide-label">
 						<input type="submit" name="creerUtilisateur" id="creerUtilisateur" value="Créer l'utilisateur">
@@ -43,7 +43,7 @@
 				} ?>
 			</div>
 			<div data-role="footer" data-position="fixed" data-theme="<?php echo $themeFooter; ?>">
-				<h4><?php echo $msgFooter; ?></h4>
+				<h4><?php echo $msgFooter; ?></h4>  
 			</div>
 		</div>
 	</body>
