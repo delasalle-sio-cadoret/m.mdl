@@ -1,6 +1,6 @@
 <?php
 	// Projet Réservations M2L - version web mobile
-	// Fonction de la vue VueDemanderMdp.php : visualiser la vue de demande d'envoi d'un nouveau mot de passe
+	// Fonction de la vue VueConfirmerReservation.php : visualiser la vue de demande d'envoi d'un nouveau mot de passe
 	// Ecrit le 12/10/2015 par Jim
 ?>
 <!doctype html>

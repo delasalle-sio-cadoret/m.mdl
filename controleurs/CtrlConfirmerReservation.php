@@ -1,7 +1,6 @@
-
 <?php
 // Projet Réservations M2L - version web mobile
-// Fonction du contrôleur CtrlConsulterReservationsConnecter.php : Consulter les reservations d'un utilisateir
+// Fonction du contrôleur CtrlConfirmerReservation.php : Consulter les reservations d'un utilisateir
 // Ecrit le 03/11/2015 par Jim
 
 // Ce contrôleur vérifie l'authentification de l'utilisateur
