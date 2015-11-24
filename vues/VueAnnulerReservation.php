@@ -39,4 +39,8 @@
 			</div>
 		</div>
 	</body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> branch 'master' of https://github.com/delasalle-sio-launay/m.mdl

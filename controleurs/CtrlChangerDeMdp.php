@@ -2,9 +2,11 @@
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlAnnulerReservation.php : Consulter les reservations d'un utilisateir
 // Ecrit le 03/11/2015 par Jim
+
 // Ce contrôleur vérifie l'authentification de l'utilisateur
 // si l'authentification est bonne, il affiche le menu utilisateur ou administrateur (vue VueMenu.php)
 // si l'authentification est incorrecte, il réaffiche la page de connexion (vue VueConnecter.php)
+
 // on teste si le terminal client est sous Android, pour lui proposer de télécharger l'application Android
 // tests des variables de session
 if ( $_SESSION['niveauUtilisateur'] != 'utilisateur' & $_SESSION['niveauUtilisateur'] != 'administrateur') {
@@ -35,6 +37,7 @@ else {
 			$dao = new DAO();
 			
 			$dao->modifierMdpUser($nom, $nouveauMdp);
+
 			// envoie un mail de confirmation de l'enregistrement
 			$ok = $dao->envoyerMdp ($nom, $nouveauMdp);
 			unset($dao);
