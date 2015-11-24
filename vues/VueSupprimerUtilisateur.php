@@ -26,7 +26,7 @@
 						<input type="submit" name="demanderMdp" id="demanderMdp" value="Supprimer l'utilisateur">
 					</div>
 				</form>
-				
+				   
 				<?php if($debug == true) {
 					// en mise au point, on peut afficher certaines variables dans la page
 					echo "<p>SESSION['nom'] = " . $_SESSION['nom'] . "</p>";
