@@ -1,6 +1,6 @@
 <?php
 	// Projet Réservations M2L - version web mobile
-	// Fonction de la vue VueAnnulerReservation.php : visualiser la vue de demande d'envoi d'un nouveau mot de passe
+	// Fonction de la vue VueChangerDeMdp.php : visualiser la vue de demande d'envoi d'un nouveau mot de passe
 	// Ecrit le 12/10/2015 par Jim
 ?>
 <!doctype html>
@@ -15,15 +15,19 @@
 				<a href="index.php?action=Menu">Retour menu</a>
 			</div>
 			<div data-role="content">
-				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Annuler une réservation</h4>
-				<form name="form1" id="form1" action="index.php?action=AnnulerReservation" method="post">
+				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Changer mon mot de passe</h4>
+				<form name="form1" id="form1" action="index.php?action=ChangerDeMdp" method="post">
 					<div data-role="fieldcontain" class="ui-hide-label">
-						<label for="numReservation">Numéro de réservation :</label>
-						<input type="number" name="numReservation" id="numReservation" placeholder="Entrez le numéro de réservation" value="" >
+						<label for="nouveauMdp">nouveauMdp :</label>
+						<input type="text" name="nouveauMdp" id="nouveauMdp" placeholder="Entrez votre nouveau mot de passe" value="" >
+					</div>
+					<div data-role="fieldcontain" class="ui-hide-label">
+						<label for="motDePasseConfirmer">confirmationMdp :</label>
+						<input type="text" name="confirmationMdp" id="confirmationMdp" placeholder="Confirmez votre nouveau mot de passe" value="" >
 					</div>
 
 					<div data-role="fieldcontain">
-						<input type="submit" name="btnAnnulerReservation" id="btnAnnulerReservation" value="Annuler la réservation">
+						<input type="submit" name="btnChangeMdp" id="btnChangeMdp" value="Changer mon mot de passe">
 					</div>
 				</form>
 				
