@@ -17,23 +17,28 @@ $dao = new DAO();
 		include_once ('vues/VueSupprimerUtilisateur.php');
 	}
 
-	elseif ($dao->existeUtilisateur($nom)== false) {
+	else if ($dao->existeUtilisateur($nom)== false) {
 		$msgFooter = 'Nom d\'utilisateur inexistant !';
 		$themeFooter = $themeProbleme;
 		include_once ('vues/VueSupprimerUtilisateur.php');
 	}
 
-	elseif ($dao->aPasseDesReservations($nom)) {
+	else if ($dao->aPasseDesReservations($nom)) {
     	$msgFooter = 'Cet utilisateur a passé des réservations à venir !';
 		$themeFooter = $themeProbleme;
 		include_once ('vues/VueSupprimerUtilisateur.php');
 	}
 
-	elseif (empty($dao->supprimerUtilisateur($nom))) {
+	else if (empty($dao->supprimerUtilisateur($nom))) {
 		$msgFooter = 'Problème lors de la suppression de l\'utilisateur !';
 		$themeFooter = $themeProbleme;
 		include_once ('vues/VueSupprimerUtilisateur.php');
 
+	}
+	else 
+	{   $msgFooter = 'Utilisateur Supprimé';
+		$themeFooter = $themeNormal;
+		include_once ('vues/VueSupprimerUtilisateur.php');
 	}
 ?>
 
