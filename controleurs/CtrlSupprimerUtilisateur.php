@@ -36,7 +36,7 @@ $dao = new DAO();
 	else 
 	{   $msgFooter = 'Utilisateur Supprimé';
 		$themeFooter = $themeNormal;
-		include_once ('vues/VueSupprimerUtilisateur.php');
+		include_once ('vues/VueSupprimerUtilisateur.php');   
 	}
 	
 ?>
