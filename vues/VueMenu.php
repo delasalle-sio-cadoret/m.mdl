@@ -19,7 +19,7 @@
 			<div data-role="content">
 				<h4 style="text-align: center; margin-top: 20px; margin-bottom: 20px;">Utilisateur : <?php echo $nom; ?></h4>
 				<ul data-role="listview" data-inset="true">
-					<li><a href="index.php?action=ConsulterReservations">Consulter mes réservations</a></li>
+					<li><a href="index.php?action=ConsulterReservations" data-transition="flip">Consulter mes réservations</a></li>
 					<li><a href="index.php?action=ConfirmerReservation">Confirmer une réservation</a></li>
 					<li><a href="index.php?action=AnnulerReservation">Annuler une réservation</a></li>
 					<li><a href="index.php?action=ChangerDeMdp">Modifier mon mot de passe</a></li>
