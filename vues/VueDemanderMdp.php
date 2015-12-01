@@ -12,11 +12,11 @@
 		<div data-role="page">
 			<div data-role="header" data-theme="<?php echo $themeNormal; ?>">
 				<h4>M2L-GRR</h4>
-				<a href="index.php?action=Deconnecter">Reconnexion</a>
+				<a href="index.php?action=Deconnecter" data-transition="<?php echo $transition2; ?>">Reconnexion</a>
 			</div>
 			<div data-role="content">
 				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Demander un nouveau mot de passe</h4>
-				<form name="form1" id="form1" action="index.php?action=DemanderMdp" method="post">
+				<form name="form1" id="form1" action="index.php?action=DemanderMdp" method="post" data-transition="<?php echo $transition; ?>">
 					<div data-role="fieldcontain" class="ui-hide-label">
 						<label for="nom">Utilisateur :</label>
 						<input type="text" name="nom" id="nom" placeholder="Entrez votre nom" value="<?php echo $nom; ?>" >

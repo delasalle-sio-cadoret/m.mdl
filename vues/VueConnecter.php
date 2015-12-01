@@ -15,7 +15,7 @@
 			</div>
 			<div data-role="content">
 				<h4 style="text-align: center; margin-top: 0px; margin-bottom: 0px;">M'identifier</h4>
-				<form name="form1" id="form1" action="index.php?action=Connecter" method="post">
+				<form name="form1" id="form1" action="index.php?action=Connecter" method="post" data-transition="<?php echo $transition; ?>">
 					<div data-role="fieldcontain" class="ui-hide-label">
 						<label for="nom">Utilisateur :</label>
 						<input type="text" name="nom" id="nom" data-mini="true" placeholder="Entrez votre nom" value="<?php echo $nom; ?>" >
