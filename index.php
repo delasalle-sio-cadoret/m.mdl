@@ -26,7 +26,8 @@ $debug = false;
 $version = "1.4.5";			// choix de la version de JQuery Mobile (voir fichier head.php) : 1.2.0,  1.2.1,  1.3.2,  1.4.5
 $themeNormal = "a";			// thème de base
 $themeProbleme = "b";		// thème utilisé pour afficher un message en cas de problème
-$transition ="flip";
+$transition ="slidefade";
+$transition2 ="flip";
 // on vérifie le paramètre action de l'URL
 if ( ! isset ($_GET['action']) == true)  $action = '';  else   $action = $_GET['action'];
 
