@@ -1,7 +1,7 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlAnnulerReservation.php : Consulter les reservations d'un utilisateir
-// Ecrit le 03/11/2015 par Jim
+// Ecrit le 24/11/2015 par Arthur
 
 // Ce contrôleur vérifie l'authentification de l'utilisateur
 // si l'authentification est bonne, il affiche le menu utilisateur ou administrateur (vue VueMenu.php)
@@ -14,6 +14,12 @@ if ( $_SESSION['niveauUtilisateur'] != 'utilisateur' & $_SESSION['niveauUtilisat
 }
 else {
 	
+	if ( ! isset ($_POST ["nouveauMdp"]) == true) {
+		// si les données n'ont pas été postées, c'est le premier appel du formulaire : affichage de la vue sans message d'erreur
+		$msgFooter = 'changer de Mot de passe';
+		$themeFooter = $themeNormal;
+		include_once ('vues/VueChangerDeMdp.php');
+	}
 	if ( empty ($_POST ["nouveauMdp"]) == true)  $nouveauMdp = ""; else $nouveauMdp = $_POST["nouveauMdp"];
 	if ( empty ($_POST ["confirmationMdp"]) == true)  $confirmationMdp = ""; else $confirmationMdp = $_POST["confirmationMdp"];
 		

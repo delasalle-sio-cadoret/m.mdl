@@ -1,6 +1,6 @@
 <?php
 // Projet Réservations M2L - version web mobile
-// Ecrit le 12/10/2015 par Jim
+// Ecrit le 24/11/2015 par Arthur
 
 // Fonction de la page principale index.php : analyser toutes les demandes et activer le contrôleur chargé de traiter l'action demandée
 
@@ -26,7 +26,7 @@ $debug = false;
 $version = "1.4.5";			// choix de la version de JQuery Mobile (voir fichier head.php) : 1.2.0,  1.2.1,  1.3.2,  1.4.5
 $themeNormal = "a";			// thème de base
 $themeProbleme = "b";		// thème utilisé pour afficher un message en cas de problème
-
+$transition = "flip";
 // on vérifie le paramètre action de l'URL
 if ( ! isset ($_GET['action']) == true)  $action = '';  else   $action = $_GET['action'];
 

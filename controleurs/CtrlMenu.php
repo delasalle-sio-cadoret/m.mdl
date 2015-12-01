@@ -1,7 +1,7 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlMenu.php : traiter la demande d'accès au menu
-// Ecrit le 12/10/2015 par Jim
+// Ecrit le 24/11/2015 par Arthur
 
 // Ce contrôleur charge simplement la vue VueMenu.php
 

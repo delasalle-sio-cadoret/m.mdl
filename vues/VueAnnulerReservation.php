@@ -1,7 +1,7 @@
 <?php
 	// Projet Réservations M2L - version web mobile
 	// Fonction de la vue VueAnnulerReservation.php : visualiser la vue de demande d'envoi d'un nouveau mot de passe
-	// Ecrit le 12/10/2015 par Jim
+// Ecrit le 24/11/2015 par Arthur
 ?>
 <!doctype html>
 <html>

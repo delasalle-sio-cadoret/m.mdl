@@ -3,7 +3,7 @@
 	// Fonction de la vue VueMenu.php : visualiser le menu de l'utilisateur ou de l'administrateur
 	// cette vue est appelée par le lien "index.php?action=Menu", sans passer par un contôleur
 	// la barre d'entête possède un lien de déconnexion permettant de retourner à la page de connexion
-	// Ecrit le 12/10/2015 par Jim
+// Ecrit le 24/11/2015 par Arthur
 ?>
 <!doctype html>
 <html>
@@ -14,7 +14,7 @@
 		<div data-role="page">
 			<div data-role="header" data-theme="<?php echo $themeNormal; ?>">
 				<h4>M2L-GRR</h4>
-				<a href="index.php?action=Deconnecter">Déconnexion</a>
+				<a href="index.php?action=Deconnecter" data-transition= <?php echo $transition;?>>Déconnexion</a>
 			</div>
 			<div data-role="content">
 				<h4 style="text-align: center; margin-top: 20px; margin-bottom: 20px;">Utilisateur : <?php echo $nom; ?></h4>
