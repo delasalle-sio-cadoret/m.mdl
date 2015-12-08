@@ -18,20 +18,20 @@
 				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Créer un Compte utillisateur</h4>
 				<form name="form1" id="form1" action="index.php?action=CreerUtilisateur" method="post">
 					<div data-role="fieldcontain" class="ui-hide-label">
-						<input type="text" name="nom" id="nom" placeholder="Entrez le nom de l'utilisateur"  >
+						<input type="text" name="nom" id="nom" placeholder="Entrez le nom de l'utilisateur" value="<?php echo $nom; ?>" >
 					</div>
 					<div data-role="fieldcontain" class="ui-hide-label">
-						<input type="email" name="mail" id="mail" placeholder="Entrez l'adresse mail"  >
+						<input type="email" name="mail" id="mail" placeholder="Entrez l'adresse mail" value="<?php echo $mail; ?>" >
 					</div>
 					<h4>Niveau :</h4>
 					
 					<div data-role="fieldcontain" class="ui-hide-label">
-					        <label><input name="niveau" type="radio" value="0">Invité</label>
-                            <label><input name="niveau" type="radio" value="1">Utilisateur</label>
-                            <label><input name="niveau" type="radio" value="2">Administrateur</label>
+					        <label><input name="niveau" id="niveau0" type="radio" value="0" <?php if ($niv == '0') echo 'checked'; ?>>Invité</label>
+                            <label><input name="niveau" id="niveau1" type="radio" value="1" <?php if ($niv == '1') echo 'checked'; ?>>Utilisateur</label>
+                            <label><input name="niveau" id="niveau2" type="radio" value="2" <?php if ($niv == '2') echo 'checked'; ?>>Administrateur</label>
 					</div>
 					<div data-role="fieldcontain" class="ui-hide-label">
-						<input type="submit" name="creerUtilisateur" id="creerUtilisateur" value="Créer l'utilisateur">
+						<input type="submit" name="btnCreerUtilisateur" id="btnCreerUtilisateur" value="Créer l'utilisateur">
 					</div>
 				</form>
 				
