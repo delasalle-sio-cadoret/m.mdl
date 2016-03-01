@@ -1,7 +1,7 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlConfirmerReservation.php : Consulter les reservations d'un utilisateir
-// Ecrit le 03/11/2015 par Jim
+// Ecrit le 03/11/2015 par youn
 // Ce contrôleur vérifie l'authentification de l'utilisateur
 // si l'authentification est bonne, il affiche le menu utilisateur ou administrateur (vue VueMenu.php)
 // si l'authentification est incorrecte, il réaffiche la page de connexion (vue VueConnecter.php)
