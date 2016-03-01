@@ -25,7 +25,7 @@
 						<p>Fin : <?php echo utf8_encode(date('Y-m-d H:i:s', $res->getEnd_time()))?></p>
 						<p>Salle : <?php echo $res->getRoom_name()?></p>
 						<p>Etat <?php if($res->getStatus()==4)echo "En attente"; else echo "Confirmée"?></p>
-						<h5 class="ui-li-aside">Digicode <?php echo $res->getDigicode() ?></h5>
+						<h5 class="ui-li-aside"><?php if($res->getStatus()==0)echo "Digicode " . $res->getDigicode() ?></h5>
 						</li>
 					</ul>
 					<?php } ?>
